@@ -1,0 +1,98 @@
+Shed cast speks
+
+
+Things we need
+
+Input form 
+	Includes drop down state bar
+	This will display mountains in that state
+	
+	Checks various conditions
+	
+	snow-fall last 48 hours
+	average base depth
+	Snow type
+
+	base temp
+	summit temp
+
+	windspeed
+
+	parks open
+	Pipes open
+
+	acres open
+	miles open
+	trails open
+
+	snow last 24 hours:
+	snowmaking?
+	Grooming? 
+
+	
+	submit data
+
+	run data
+    
+
+     var list_temperature = document.createElement('li');
+                                                $(condtions_list1).append(list_temperature);           
+                                                $(list_temperature).append(temperature);
+                                                $(list_temperature).addClass('temp');
+
+                                                // BASE INCHES
+                                                var list_base = document.createElement('li');
+                                                $(condtions_list1).append(list_base);
+                                                $(list_base).append(base); 
+                                                $(list_base).addClass('base');
+
+                                                // WIND SPEED
+                                                var list_windSpeed = document.createElement('li');
+                                                $(condtions_list1).append(list_windSpeed); 
+                                                $(list_windSpeed).append(windSpeed);
+                                                $(list_windSpeed).addClass("windSpeed");
+
+
+
+                                                  $(mount.mountain).each(function() {
+                    var name = this.name;
+                    var temperature =  this.temp;
+                    var cityState = this.state;
+                    var windSpeed = this.windspeed;
+                    var base = this.snow;
+                    var ShredCastScore = 80;
+
+                    // String Variables
+                    var temp_string = "Temperature:     ";
+                    var wind_string = "Wind Speed:     ";
+                    var base_string = "Base:     ";
+
+                    
+
+                    // String + Condition
+                    var temp_text = temp_string + temperature;
+                    var wind_text = wind_string + windSpeed;
+                    var base_text = base_string + base;
+});
+
+
+     $(mount.mountain).each(function() {
+                    var name = this.name;
+                    var temperature =  this.temp;
+                    var cityState = this.state;
+                    var windSpeed = this.windspeed;
+                    var base = this.snow;
+                    var ShredCastScore = 80;
+
+                    // String Variables
+                    var temp_string = "Temperature:     ";
+                    var wind_string = "Wind Speed:     ";
+                    var base_string = "Base:     ";
+
+                    
+
+                    // String + Condition
+                    var temp_text = temp_string + temperature;
+                    var wind_text = wind_string + windSpeed;
+                    var base_text = base_string + base;
+});

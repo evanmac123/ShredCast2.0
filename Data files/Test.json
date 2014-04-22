@@ -1,0 +1,53 @@
+// JavaScript Document
+
+
+
+
+
+// JavaScript Document
+
+
+
+
+
+var mount= {"mountain":[ 
+	{"name":"Loon Mountain" , 
+	"state":"NH",
+	"snow":5,
+	"windspeed":4,
+	"temp":"20 F"}, 
+	
+	{"name":"Stowe Mountain" , 
+	"state":"NH",
+	"snow":4,
+	"windspeed":5,
+	"temp":"20 F"}, 
+	
+	{"name":"Sugarloaf" , 
+	"state":"VT",
+	"snow":3,
+	"windspeed":4,
+	"temp":"20 F"}, 
+	
+	{"name":"Blue Hills" , 
+	"state":"MA",
+	"snow":9,
+	"windspeed":4,
+	"temp":"20 F"}, 
+
+	{"name":"Sunday River" , 
+	"state":"ME",
+	"snow":9,
+	"windspeed":4,
+	"temp":20}, 
+	
+]
+}
+
+var states = {"statenames":[
+{"state_name":"NH", },
+{"state_name":"ME", },
+{"state_name":"VT", },
+{"state_name":"MA", },
+
+]}   
