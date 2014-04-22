@@ -1,0 +1,93 @@
+// JavaScript Document
+
+
+
+
+
+// JavaScript Document
+{"mountain_data":[ 
+    {"mountains":[
+        {"name":"Killington Resort", //u'resortName'
+        "state":"VT", //u'state'
+        "id":"802007", //u'id'
+        "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
+        "snowLast48":"0", //u'snowLast48Hours'
+        "snowNext24":"0", //u'predictedSnowFall_24Hours'
+        "snowNext48":"0", //u'predictedSnowFall_48Hours'
+        "snowNextWeek":"4", //u'predictedSnowFall_7days'
+        "snowBaseMax":"30", //u'avgBaseDepthMax'
+        "snowBaseMin":"12", //u'avgBaseDepthMin'
+        "openTrails":"66", //u'openDownHillTrials'
+        "openAcres":"316", //u'openDownHillAcres'
+        "openLifts":"5", //u'openDownHillLifts'
+        "maxTrails":"155", //u'maxOpenDownHillTrails'
+        "maxAcres":"1509", //u'maxOpenDownHillAcres'
+        "maxLifts":"22", //u'maxOpenDownHillLifts'
+        "terrainParkOpen":"yes", //u'terrainParkOpen'
+        "parksOpen":"1", //u'numberTerrainParksOpen'
+        "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+        "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+        "baseTempPredicted":"49", //u'foreCastBaseTemp'
+        "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+        "windToday":"24", //u'weatherToday_WindSpeed'
+        "weatherTodayLow":"30", //u'weatherToday_Temperature_Low'
+        "weatherTodayHigh":"38", //u'weatherToday_Temperaute_High'
+        "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+        "windTomorrow":"14", //u'weatherTomorrow_WindSpeed'
+        "weatherTomorrowLow":"24", //u'weatherTomorrow_Temperature_Low'
+        "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
+        }
+        ]
+    },
+
+    {"statenames":[
+        {"state_name":"NH", },
+        {"state_name":"ME", },
+        {"state_name":"VT", },
+        {"state_name":"MA", }
+        ]
+    },
+
+    {"snow_conditions":[
+        {"condition":"Snow Conditions"},
+        {"condition":"lastSnow", },
+        {"condition":"snowLast48", },
+        {"condition":"snowNext24", },
+        {"condition":"snowNext48", },
+        {"condition":"snowNextWeek", },
+        {"condition":"snowBaseMax", },
+        {"condition":"snowBaseMin", },
+        ]
+    },
+
+    {"mountain_conditions":[
+        {"condition":"Mountain Conditions"},
+        {"condition":"openTrails", },
+        {"condition":"openAcres", },
+        {"condition":"openLifts", },
+        {"condition":"maxTrails", },
+        {"condition":"maxLifts", },
+        {"condition":"maxTrails", },
+        {"condition":"maxAcres", },
+        {"condition":"terrainParkOpen", },
+        {"condition":"parksOpen", },
+        {"condition":"primarySurface", },
+        {"condition":"primarySurfaceCondition", },
+        ]
+    },
+
+    {"weather_conditions":[
+        {"condition":"Weather Conditions"},
+        {"condition":"baseTempPredicted", },
+        {"condition":"weatherToday", },
+        {"condition":"weatherTomorrow", },
+        {"condition":"windToday", },
+        {"condition":"windTomorrow", },
+        {"condition":"weatherTodayLow", },
+        {"condition":"weatherTodayHigh", },
+        {"condition":"weatherTomorrowLow", },
+        {"condition":"weatherTomorrowHigh", },
+        ]
+    }
+    ]
+}
