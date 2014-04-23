@@ -20,6 +20,8 @@
     <!--script src="./page_files/bo_otstrap.min.js"></script>-->
 
     <script type="text/javascript" src="Data files/Test.json"></script>
+  <!-- <script type="text/javascript" src="MaxsJson.json"></script>-->
+
 
 </head>
 
@@ -186,6 +188,8 @@ $(".rankingsnav").click(function(){
                             // FUNCTION THAT CREATES STATE LIST
                 $(states.statenames).each(function() {
 
+
+
                             var state_name = this.state_name;
                                 // 
                             var mnt_menu_stateList = document.createElement('li');
@@ -217,20 +221,9 @@ $(".rankingsnav").click(function(){
                     var windSpeed = this.windspeed;
                     var base = this.snow;
                     var ShredCastScore = 80;
-
-                    // String Variables
-                    var temp_string = "Temperature:     ";
-                    var wind_string = "Wind Speed:     ";
-                    var base_string = "Base:     ";
                     var sign = "#";
                     var statehash = sign + cityState;
-
                    
-
-                    // String + Condition
-                    var temp_text = temp_string + temperature;
-                    var wind_text = wind_string + windSpeed;
-                    var base_text = base_string + base;
 
                     var mountain_li = document.createElement("li")
                     $(statehash).append(mountain_li);
@@ -342,6 +335,10 @@ $(".rankingsnav").click(function(){
 
 ///////////////////////////////////////// Conditions page////////////////////////////////////////
 
+// Condtion variables
+
+// Variables Range from 1 to 5 
+// 
 
 
 
@@ -484,12 +481,87 @@ $(".conditions_page").append(conditions_selection_panel);
 
                 $(mount.mountain).each(function() {
                     //Specific mountain variables
-                    var name = this.name;
-                    var temperature = this.temp;
-                    var cityState = this.state;
-                    var windSpeed = this.windspeed;
-                    var base = this.snow;
-                    var ShredCastScore = base + windSpeed;
+
+                    //Mountain Numbers
+                    var name = this.name
+                    var state = this.state
+                    var lastSnow = this.lastSnow    //u'lastSnowFallDate'
+                    var snowLast48 = this.snowLast48 //u'snowLast48Hours'
+                    var snowNext24 = this.snowNext24  //u'predictedSnowFall_24Hours'
+                    var snowNext48 = this.snowNext48 //u'predictedSnowFall_48Hours'
+                    var snowNextWeek = this.snowNextWeek //u'predictedSnowFall_7days'
+                    var snowBaseMax = this.snowBaseMax   //u'avgBaseDepthMax'
+                    var snowBaseMin = this.snowBaseMin    //u'avgBaseDepthMin'
+                    var openTrails = this.openTrails     //u'openDownHillTrials'
+                    var openAcres = this.openAcres     //u'openDownHillAcres'
+                    var openLifts = this.openLifts     //u'openDownHillLifts'
+                    var maxTrails = this.maxTrails //u'maxOpenDownHillTrails'
+                    var maxAcres = this.maxAcres //u'maxOpenDownHillAcres'
+                    var maxLifts = this.maxLifts//u'maxOpenDownHillLifts'
+                    var terrainParkOpen = this.terrainParkOpen //u'terrainParkOpen'
+                    var parksOpen = this.parksOpen //u'numberTerrainParksOpen'
+                    var primarySurface = this.primarySurface//u'primarySurfaceCondition'
+                    var secondarySurface = this.secondarySurface //u'secondarySurfaceCondition'
+                    var baseTempPredicted = this.baseTempPredicted //u'foreCastBaseTemp'
+                    var weatherToday = this.weatherToday //u'weatherToday_Condition'
+                    var windToday = this.windToday //u'weatherToday_WindSpeed'
+                    var weatherTodayLow = this.weatherTodayLow//u'weatherToday_Temperature_Low'
+                    var weatherTodayHigh = this.weatherTodayHigh //u'weatherToday_Temperaute_High'
+                    var weatherTomorrow = this.weatherTomorrow//u'weatherTomorrow_Condition'
+                    var windTomorrow = this.windTomorrow//u'weatherTomorrow_WindSpeed'
+                    var weatherTomorrowLow = this.weatherTomorrowLow //'weatherTomorrow_Temperature_Low'
+                    var weatherTomorrowHigh = this.weatherTomorrowHigh //
+
+                    var ShredCastScore = ;
+
+
+                    //Mountain deisplay text
+                    var lastSnow_text = "Last Snowfall: " +lastSnow    //u'lastSnowFallDate'
+                    var snowLast48_text = "Snow in the last 48 hours: "+snowLast48 +" in" //u'snowLast48Hours'
+                    var snowNext24_text = "Snow in the last 24 hours: " +snowNext24 +" in"  //u'predictedSnowFall_24Hours'
+                    var snowNext48_text = "Snow in the  24 hours: " + snowNext48 +' in' //u'predictedSnowFall_48Hours'
+                    var snowNextWeek_text = "Snow in the next week: " + snowNextWeek +' in' //u'predictedSnowFall_7days'
+                    var snowBaseMax_text = "Base Snow Max Depth: "+snowBaseMax+" in"   //u'avgBaseDepthMax'
+                    var snowBaseMin_text = "Base Snow Min Depth: "+snowBaseMin+" in"    //u'avgBaseDepthMin'
+                    var openTrails_text = "Open Trails: " + openTrails +  "/" + maxTrails   //u'openDownHillTrials'
+                    var openAcres_text = "Open Acres: " + openAcres + "/" + maxAcres     //u'openDownHillAcres'
+                    var openLifts_text = "Open Lifts: " + openLifts  + "/" + maxLifts   //u'openDownHillLifts'
+                    var terrainParkOpen_text = "Terrain Park?: " + terrainParkOpen //u'terrainParkOpen'
+                    var parksOpen_text = "Terrain Parks Open: " + parksOpen //u'numberTerrainParksOpen'
+                    var primarySurface_text = "Primary Surface: "+ primarySurface//u'primarySurfaceCondition'
+                    var secondarySurface_text = "Secondary Surface: " + secondarySurface //u'secondarySurfaceCondition'
+                    var baseTempPredicted_text = "BaseTemp: " + baseTempPredicted + " F"//u'foreCastBaseTemp'
+                    var weatherToday_text = "Forcast: " + weatherToday //u'weatherToday_Condition'
+                    var windToday_text = "Windspeed: " + windToday + " mph" //u'weatherToday_WindSpeed'
+                    var weatherTodayLow_text = "High for today: " + weatherTodayLow + " F" //u'weatherToday_Temperature_Low'
+                    var weatherTodayHigh_text = "Low for today: " + weatherTodayHigh + " F" //u'weatherToday_Temperaute_High'
+                    var weatherTomorrow_text = "Forcast Tommorrow: " +weatherTomorrow + " F"//u'weatherTomorrow_Condition'
+                    var windTomorrow_text = windTomorrow//u'weatherTomorrow_WindSpeed'
+                    var weatherTomorrowLow_text = "Low Today " + weatherTomorrowLow + " F" //'weatherTomorrow_Temperature_Low'
+                    var weatherTomorrowHigh_text = "High Today " + weatherTomorrowHigh + " F" //
+
+
+
+
+
+                 //   var temperature = this.temp;
+                  //  var cityState = this.state;
+                   // var windSpeed = this.windspeed;
+                  //  var base = this.snow;
+                    
+
+
+                     // String Variables
+                  //  var sign = "#";
+                  //  var statehash = sign + cityState;
+
+                 //   var temperature =  "Temp:     "+ temperature + "F";
+                   // var windSpeed = "Wind Speed:     " + windSpeed +"mph";
+                  //  var base = "Base:     "+base;
+
+                   
+
+                    
               
  
                             var mountain_panel = document.createElement('div');
@@ -511,6 +583,7 @@ $(".conditions_page").append(conditions_selection_panel);
 
                                  var name_text = document.createElement('h1');
                                         $(name_text).append(name);
+                                        //Removes spaces from name
                                         var name = name.replace(/ /gi, '_'); 
                                         $(name_text).addClass(name);
                                         $(name_col).append(name_text);
@@ -521,7 +594,7 @@ $(".conditions_page").append(conditions_selection_panel);
 
                                var cityState_text = document.createElement('h1');
                                 $(cityStateplace).append(cityState_text);
-                                $(cityState_text).append(cityState);
+                                $(cityState_text).append(state);
 
 
 
@@ -569,20 +642,20 @@ $(".conditions_page").append(conditions_selection_panel);
                                                 // TEMPERATURE
                                                var list_temperature = document.createElement('li');
                                                 $(condtions_list1).append(list_temperature);           
-                                                $(list_temperature).append(temperature);
-                                                $(list_temperature).addClass('temp');
+                                                $(list_temperature).append(weatherToday_text);
+                                                $(list_temperature).addClass('weather');
 
                                                 // BASE INCHES
                                                 var list_base = document.createElement('li');
                                                 $(condtions_list1).append(list_base);
-                                                $(list_base).append(base); 
+                                                $(list_base).append(snowLast48_text); 
                                                 $(list_base).addClass('base');
 
                                                 // WIND SPEED
                                                 var list_windSpeed = document.createElement('li');
                                                 $(condtions_list1).append(list_windSpeed); 
-                                                $(list_windSpeed).append(windSpeed);
-                                                $(list_windSpeed).addClass("windSpeed");
+                                                $(list_windSpeed).append(openLifts_text);
+                                                $(list_windSpeed).addClass("Lifts");
                                                 // 2nd coloumn in the rankings row  
                                         var conditions_col2 = document.createElement('div');
                                         $(conditions_col2).addClass('col-sm-6');
@@ -597,17 +670,17 @@ $(".conditions_page").append(conditions_selection_panel);
                                                 // SOMETHING
                                                 var list_temperature = document.createElement('li');
                                                 $(condtions_list2).append(list_temperature);
-                                                $(list_temperature).append(temperature);
+                                                $(list_temperature).append(baseTempPredicted_text);
 
                                                 // SOMETHING
                                                 var list_base = document.createElement('li');
                                                 $(condtions_list2).append(list_base);
-                                                $(list_base).append(base); 
+                                                $(list_base).append(snowBaseMax_text); 
 
                                                 // SOMETHING
                                                 var list_windSpeed = document.createElement('li');
                                                 $(condtions_list2).append(list_windSpeed); 
-                                                $(list_windSpeed).append(windSpeed);
+                                                $(list_windSpeed).append(windToday_text);
 
 
 
@@ -642,23 +715,19 @@ $(".btn2").click(function(){
 
    //General variables
                 var Loon = "Loon_Mountain";
-                var mountainlist = new Array( Loon, "Sunday_River","Blue_Hills" );
+                var mountainlist = new Array( Loon, "Killington_Resort","Another_Resort" );
                 var something = mountainlist.forEach;
                 
                 var i;
 
 $.each(mountainlist,function(position,name) {
-
+//Functionallity to switch on an off mountains on the list
 //alert("#"+name);
-$("."+name).parent().parent().parent().toggle("slide");
+$("."+name).parent().parent().parent().toggle("slide", { direction: "right" }, 1200);
 //$('').append("Hello");
 
 //
-//$("h1: contains(Loon)").parent().parent().parent().toggle();
 
-
-
-//$("li:contains('9')").parent().parent().parent().parent().parent().toggle();
 
 });
 
