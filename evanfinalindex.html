@@ -5,14 +5,15 @@
     <title>ShredCast</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-     
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- JavaScript -->
    
     <script type="text/javascript"src="js/jquerycode.js"></script>
     <script type="text/javascript"src="js/bootstrap.js"></script> 
     <script type="text/javascript" src="js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <link  rel="stylesheet" type="text/css" href="js/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.css">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--script src="./page_files/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -22,8 +23,26 @@
 
 </head>
 
+<script>
+        $(document).ready(function(){
 
 
+
+$(function() {
+    $( "#slider" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 50,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  });
+		});
+  
+</script>
 <body>
     <img src="Images/background.jpg" id="full-screen-background-image" />
 
@@ -39,7 +58,17 @@
 
 <div class="wrap">
 <div class="mountain_page slides"></div>
-<div class="conditions_page slides"></div>
+<div class="conditions_page slides">
+
+
+<p>
+  <label for="amount">Donation amount ($50 increments):</label>
+  <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+ 
+<div id="slider"></div>
+
+</div>
 <div class="rankings_page slides"><button class="btn2"> this one </button> </div>
 </div>
 
@@ -49,7 +78,18 @@
 
 
 
-
+ $(function() {
+    $( "#slider" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 50,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  });
 
 
 
@@ -455,6 +495,9 @@ $(".conditions_page").append(conditions_selection_panel);
                             var mountain_panel = document.createElement('div');
                             $(mountain_panel).addClass('container');
                             $(mountain_panel).addClass('mountain_panel');
+                            $(mountain_panel).hide();
+
+
                            
 
                                  // Row for Mountain name and City, State
