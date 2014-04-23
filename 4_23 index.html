@@ -25,6 +25,24 @@
 </head>
 
 
+<script>
+
+$(document).ready(function(){
+      $(function() {
+    $( "#slider" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 50,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  });
+    });
+</script>
+
 
 <body>
     <img src="Images/background.jpg" id="full-screen-background-image" />
@@ -45,6 +63,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
+              <p>
+                <label for="amount">Donation amount ($50 increments):</label>
+                <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;"></p>
+
           <div id="slider"></div>
             <h2> Rate your conditions.</h2>
             <div class="menu_div">
@@ -383,7 +405,7 @@ $(".rankingsnav").click(function(){
     });
 
 
-
+/*
     var lastSnow_slider = 0;
     $(function() {
       $( "#slider_lastSnow" ).slider({
@@ -398,7 +420,7 @@ $(".rankingsnav").click(function(){
       $( "#lastSnow_value" ).val( "$" + $( "#slider_lastSnow" ).slider( "value" ) );
     });
 
-
+*/
 
       $(function() {
     $( "#slider" ).slider({
@@ -412,7 +434,6 @@ $(".rankingsnav").click(function(){
     });
     $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
   });
-  </scri
  
 ///////////////////////////////////////// END of Conditions page////////////////////////////////////////
 
