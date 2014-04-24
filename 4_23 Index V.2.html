@@ -31,19 +31,6 @@
 <script>
 // FUNCTIONS THAT CONTROL SLIDERS
 $(document).ready(function(){
-      $(function() {
-    $( "#slider" ).slider({
-      value:100,
-      min: 0,
-      max: 500,
-      step: 50,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-  });
-
 
 // ----------- SNOW CONDITIONS ----------
 
@@ -62,15 +49,225 @@ $(document).ready(function(){
       $( "#lastSnow_value" ).val( "$" + $( "#slider_lastSnow" ).slider( "value" ) );
     });
 
+        // snowLast48
+    var snowLast48_slider = 0;
+    $(function() {
+      $( "#slider_snowLast48" ).slider({
+        value: snowLast48_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#snowLast48_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#snowLast48_value" ).val( "$" + $( "#slider_snowLast48" ).slider( "value" ) );
+    });
+
+        // snowNext24
+    var snowNext24_slider = 0;
+    $(function() {
+      $( "#slider_snowNext24" ).slider({
+        value: snowNext24_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#snowNext24_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#snowNext24_value" ).val( "$" + $( "#snowNext24" ).slider( "value" ) );
+    });
+
+        // snowNext48
+    var snowNext48_slider = 0;
+    $(function() {
+      $( "#slider_snowNext48" ).slider({
+        value: snowNext48_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#snowNext48_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#snowNext48_value" ).val( "$" + $( "#snowNext48" ).slider( "value" ) );
+    });
+
+        // snowNextWeek
+    var snowNextWeek_slider = 0;
+    $(function() {
+      $( "#slider_snowNextWeek" ).slider({
+        value: snowNextWeek_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#snowNextWeek_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#snowNextWeek_value" ).val( "$" + $( "#snowNextWeek" ).slider( "value" ) );
+    });
+
 
 // ----------- MOUNTAIN CONDITIONS ----------
 
+        // snowBaseMax
+    var snowBaseMax_slider = 0;
+    $(function() {
+      $( "#slider_snowBaseMax" ).slider({
+        value: snowBaseMax_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#snowBaseMax_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#snowBaseMax_value" ).val( "$" + $( "#snowBaseMax" ).slider( "value" ) );
+    });
+
+            // openTrails
+    var openTrails_slider = 0;
+    $(function() {
+      $( "#slider_openTrails" ).slider({
+        value: openTrails_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#sopenTrails_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#openTrails_value" ).val( "$" + $( "#openTrails" ).slider( "value" ) );
+    });
+
+            // openLifts
+    var openLifts_slider = 0;
+    $(function() {
+      $( "#slider_openLifts" ).slider({
+        value: openLifts_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#openLifts_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#openLifts_value" ).val( "$" + $( "#openLifts" ).slider( "value" ) );
+    });
+
+            // openAcres
+    var openAcres_slider = 0;
+    $(function() {
+      $( "#slider_openAcres" ).slider({
+        value: openAcres_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#openAcres_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#openAcres_value" ).val( "$" + $( "#openAcres" ).slider( "value" ) );
+    });
+
+            // parksOpen
+    var parksOpen_slider = 0;
+    $(function() {
+      $( "#slider_parksOpen" ).slider({
+        value: parksOpen_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#parksOpen_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#parksOpen_value" ).val( "$" + $( "#parksOpen" ).slider( "value" ) );
+    });
 
 
 // ----------- WEATHER CONDITIONS ----------
 
+            // baseTempPredicted
+    var baseTempPredicted_slider = 0;
+    $(function() {
+      $( "#slider_baseTempPredicted" ).slider({
+        value: baseTempPredicted_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#baseTempPredicted_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#baseTempPredicted_value" ).val( "$" + $( "#baseTempPredicted" ).slider( "value" ) );
+    });
 
-});
+            // weatherToday
+    var weatherToday_slider = 0;
+    $(function() {
+      $( "#slider_weatherToday" ).slider({
+        value: weatherToday_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#weatherToday_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#weatherToday_value" ).val( "$" + $( "#weatherToday" ).slider( "value" ) );
+    });
+
+            // weatherTomorrow
+    var weatherTomorrow_slider = 0;
+    $(function() {
+      $( "#slider_weatherTomorrow" ).slider({
+        value: parksOpen_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#weatherTomorrow_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#weatherTomorrow_value" ).val( "$" + $( "#weatherTomorrow" ).slider( "value" ) );
+    });
+
+            // windToday
+    var windToday_slider = 0;
+    $(function() {
+      $( "#slider_windToday" ).slider({
+        value: windToday_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#windToday_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#windToday_value" ).val( "$" + $( "#windToday" ).slider( "value" ) );
+    });
+
+            // windTomorrow
+    var windTomorrow_slider = 0;
+    $(function() {
+      $( "#slider_windTomorrow" ).slider({
+        value: windTomorrow_slider,
+        min: -2,
+        max: 2,
+        step: 1,
+        slide: function( event, ui ) {
+          $( "#windTomorrow_value" ).val( "$" + ui.value );
+        }
+      });
+      $( "#windTomorrow_value" ).val( "$" + $( "#windTomorrow" ).slider( "value" ) );
+    });
+  });
+
+
+
 </script>
 
 
@@ -96,135 +293,231 @@ $(document).ready(function(){
         </div>
         <div class="row">
           <div class="col-md-4">
+            <h2>Snow Conditions</h2> 
 
 
 <!--  SNOW CONDITIONS COLUMN -->
-        <div class="row">
-          <div id="item" class="condition_menu">
-            <h3 class="conditions_menu">Last snow</h3> 
-            <div id="slider_lastSnow" class="sliderMargin"></div> <!-- lastSnow -->
-            <div class="col-md-6 col-xs-6">
-              Doesn't Matter
-            </div>
-            <div class="col-md-6 col-xs-6 alignTextRight">
-            Matters alot
-            </div>
-          </div>
-        </div>
+<div class="row">
+  <div  class="condition_menu">
+    <h3 class="conditions_menu">Last snow</h3> 
+    <div id="slider_lastSnow" class="sliderMargin"></div> <!-- lastSnow -->
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-        <div class="row">
-          <div id="item" class="condition_menu">
-            <h3 class="conditions_menu">Snow past 48hrs</h3> 
-            <div id="slider_lastSnow" class="sliderMargin"></div>  <!-- snowLast48 -->
-            <div class="col-md-6 col-xs-6">
-              Doesn't Matter
-            </div>
-            <div class="col-md-6 col-xs-6 alignTextRight">
-            Matters alot
-            </div>
-          </div>
-        </div>
+<div class="row">
+  <div class="condition_menu">
+    <h3 class="conditions_menu">Snow past 48hrs</h3> 
+    <div id="slider_snowLast48" class="sliderMargin"></div>  <!-- snowLast48 -->
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-        <div class="row">
-          <div id="item" class="condition_menu">
-          <h3 class="conditions_menu">Snow in the next 24hrs</h3> <!-- snowNext24 -->
-            <div id="slider_lastSnow" class="sliderMargin"></div> 
-            <div class="col-md-6 col-xs-6">
-              Doesn't Matter
-            </div>
-            <div class="col-md-6 col-xs-6 alignTextRight">
-            Matters alot
-            </div>
-          </div>
-        </div>
+<div class="row"> 
+<div class="condition_menu">
+  <h3 class="conditions_menu">Snow in the next 24hrs</h3> <!-- snowNext24 -->
+    <div id="slider_snowNext24" class="sliderMargin"></div> 
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-        <div class="row">
-          <div id="item" class="condition_menu">
-          <h3 class="conditions_menu">Snow in the next 48hrs</h3> <!-- snowNext48 -->
-            <div id="slider_lastSnow" class="sliderMargin"></div> 
-            <div class="col-md-6 col-xs-6">
-              Doesn't Matter
-            </div>
-            <div class="col-md-6 col-xs-6 alignTextRight">
-            Matters alot
-            </div>
-          </div>
-        </div>
+<div class="row">
+  <div  class="condition_menu">
+  <h3 class="conditions_menu">Snow in the next 48hrs</h3> <!-- snowNext48 -->
+    <div id="slider_snowNext48" class="sliderMargin"></div> 
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-        <div class="row">
-          <div id="item" class="condition_menu">
-          <h3 class="conditions_menu">Snowfall next week</h3> <!-- snowNextWeek -->
-            <div id="slider_lastSnow" class="sliderMargin"></div> 
-            <div class="col-md-6 col-xs-6">
-              Doesn't Matter
-            </div>
-            <div class="col-md-6 col-xs-6 alignTextRight">
-            Matters alot
-            </div>
-          </div>
-        </div>
-
-
-
+<div class="row">
+  <div class="condition_menu">
+  <h3 class="conditions_menu">Snowfall next week</h3> <!-- snowNextWeek -->
+    <div id="slider_snowNextWeek" class="sliderMargin"></div> 
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
+</div>
 
 
 <!--  MOUNTAIN CONDITIONS COLUMN -->
-        <div class="col-md-4">
-          <div class="menu_div">
-            <ul id="">
-              <li id="active"><a href="#">Mountain Conditions</a>
-                  <ul>
-                    <li><a href="#">Base inches</a></li> <!-- snowBaseMax / snowBaseMin -->
-                    <li><a href="#">Open trails</a></li> <!-- openTrails / maxTrails -->
-                    <li><a href="#">Open acres</a></li> <!-- openAcres / maxAcres -->
-                    <li><a href="#">Open lifts</a></li> <!--  openLifts / maxLifts -->
-                    <li><a href="#">Terrain parks open</a></li> <!-- parksOpen -->
-                    <li><a href="#">Snow condition</a></li> <!-- primarySurface -->
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
+
+  <div class="col-md-4">
+    <h2>Mountain Conditions</h2> 
+
+    <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Base inches</h3> 
+        <div id="slider_snowBaseMax" class="sliderMargin"></div> <!-- snowBaseMax -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
         </div>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of open trails</h3> 
+        <div id="slider_openTrails" class="sliderMargin"></div> <!-- openTrails -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of open lifts</h3> 
+        <div id="slider_openLifts" class="sliderMargin"></div> <!-- openLifts -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of open acres </h3> 
+        <div id="slider_openAcres" class="sliderMargin"></div> <!-- openAcres -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of terrain parks open</h3> 
+        <div id="slider_parksOpen" class="sliderMargin"></div> <!--parksOpen -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 <!--  WEATHER CONDITIONS COLUMN -->
-        <div class="col-md-4">
-          <div class="menu_div">
-            <ul id="">
-              <li id="active"><a href="#">Weather Conditions</a>
-                  <ul>
-                      <li><a href="#">Base Temperature</a></li> <!-- baseTempPredicted -->
-                      <li><a href="#">Weather Today</a></li> <!-- weatherToday -->
-                      <li><a href="#">Weather Tomorrow</a></li> <!-- weatherTomorrow -->
-                      <li><a href="#">Wind Today</a></li> <!-- windToday -->
-                      <li><a href="#">Wind Tomorrow</a></li> <!-- windTomorrow -->
-                      <li><a href="#"> High Temperature Today</a></li> <!-- weatherTodayHigh -->
-                      <li><a href="#"> Low Temperature Today</a></li> <!-- weatherTodayLow -->
-                      <li><a href="#"> High Temperature Tomorrow</a></li> <!-- weatherTomorrowHigh -->
-                      <li><a href="#"> Low Temperature Tomorrow</a></li> <!-- weatherTomorrowLow -->
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+
+<div class="col-md-4">
+  <h2>Weather Conditions</h2>
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Base Temperature</h3> 
+      <div id="slider_baseTempPredicted" class="sliderMargin"></div> <!-- baseTempPredicted -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
       </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Weather today</h3> 
+      <div id="slider_weatherToday" class="sliderMargin"></div> <!-- weatherToday + weatherTodayHigh + weatherTodayLow -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Weather tomorrow</h3> 
+      <div id="slider_weatherTomorrow" class="sliderMargin"></div> <!-- weatherTomorrow + weatherTomorrowHigh + weatherTomorrowLow-->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Wind today</h3> 
+      <div id="slider_windToday" class="sliderMargin"></div> <!-- windToday -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
 
-
-
-
-
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Wind tomorrow</h3> 
+      <div id="slider_windTomorrow" class="sliderMargin"></div> <!-- windTomorrow -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+
+
 <div class="rankings_page slides"><button class="btn2"> this one </button> </div>
 </div>
 
+
+
 <script>
 
-        $(document).ready(function(){
+$(document).ready(function(){
 
 
 
@@ -336,7 +629,7 @@ $(".rankingsnav").click(function(){
                             $(mnt_menu_stateList).append(mnt_menu_state_name);
                             $(mnt_menu_state_name).append(state_name);
 
-                                                                                          // state = name from json file
+                                                                                    
                             var mnt_list_container = document.createElement('ul');
                             $(mnt_list_container).attr("id", state_name);
                             $(mnt_menu_stateList).append(mnt_list_container);
@@ -503,24 +796,6 @@ $(".rankingsnav").click(function(){
 
 
     });
-
-
-/*
-    var lastSnow_slider = 0;
-    $(function() {
-      $( "#slider_lastSnow" ).slider({
-        value: lastSnow_slider,
-        min: -2,
-        max: 2,
-        step: 1,
-        slide: function( event, ui ) {
-          $( "#lastSnow_value" ).val( "$" + ui.value );
-        }
-      });
-      $( "#lastSnow_value" ).val( "$" + $( "#slider_lastSnow" ).slider( "value" ) );
-    });
-
-*/
 
 ///////////////////////////////////////// END of Conditions page////////////////////////////////////////
 
