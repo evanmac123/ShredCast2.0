@@ -13,6 +13,7 @@
     <script type="text/javascript"src="js/jquerycode.js"></script>
     <script type="text/javascript"src="js/bootstrap.js"></script> 
     <script type="text/javascript" src="js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tinysort.min.js"></script>
     <link  rel="stylesheet" type="text/css" href="js/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.css">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--script src="./page_files/jquery.min.js"></script>-->
@@ -71,18 +72,7 @@ $(function() {
 
 
 <!--  SNOW CONDITIONS COLUMN -->
-<div class="row">
-  <div  class="condition_menu">
-    <h3 class="conditions_menu">Last snow</h3> 
-    <div id="slider_lastSnow" class="sliderMargin"></div> <!-- lastSnow -->
-    <div class="col-md-6 col-xs-6">
-      Doesn't Matter
-    </div>
-    <div class="col-md-6 col-xs-6 alignTextRight">
-    Matters a lot
-    </div>
-  </div>
-</div>
+
 
 <div class="row">
   <div class="condition_menu">
@@ -182,18 +172,7 @@ $(function() {
       </div>
     </div>
 
-      <div class="row">
-      <div class="condition_menu">
-        <h3 class="conditions_menu">Number of open acres </h3> 
-        <div id="slider_openAcres" class="sliderMargin"></div> <!-- openAcres -->
-        <div class="col-md-6 col-xs-6">
-          Doesn't Matter
-        </div>
-        <div class="col-md-6 col-xs-6 alignTextRight">
-        Matters a lot
-        </div>
-      </div>
-    </div>
+   
 
 
     <div class="row">
@@ -216,18 +195,7 @@ $(function() {
 
 <div class="col-md-4">
   <h2>Weather Conditions</h2>
-  <div class="row">
-    <div class="condition_menu">
-      <h3 class="conditions_menu">Base Temperature</h3> 
-      <div id="slider_baseTempPredicted" class="sliderMargin"></div> <!-- baseTempPredicted -->
-      <div class="col-md-6 col-xs-6">
-        Doesn't Matter
-      </div>
-      <div class="col-md-6 col-xs-6 alignTextRight">
-      Matters a lot
-      </div>
-    </div>
-  </div>
+
 
   <div class="row">
     <div class="condition_menu">
@@ -569,20 +537,7 @@ $(".rankingsnav").click(function(){
 
 // ----------- SNOW CONDITIONS ----------
 
-    // lastSnow
-    var lastSnow_slider = 0;
-    $(function() {
-      $( "#slider_lastSnow" ).slider({
-        value: lastSnow_slider,
-        min: -2,
-        max: 2,
-        step: 1,
-        slide: function( event, ui ) {
-          $( "#lastSnow_value" ).val( "$" + ui.value );
-        }
-      });
-      $( "#lastSnow_value" ).val( "$" + $( "#slider_lastSnow" ).slider( "value" ) );
-    });
+
 
         // snowLast48
     var snowLast48_slider = 0;
@@ -692,21 +647,7 @@ $(".rankingsnav").click(function(){
       $( "#openLifts_value" ).val( "$" + $( "#openLifts" ).slider( "value" ) );
     });
 
-            // openAcres
-    var openAcres_slider = 0;
-    $(function() {
-      $( "#slider_openAcres" ).slider({
-        value: openAcres_slider,
-        min: -2,
-        max: 2,
-        step: 1,
-        slide: function( event, ui ) {
-          $( "#openAcres_value" ).val( "$" + ui.value );
-        }
-      });
-      $( "#openAcres_value" ).val( "$" + $( "#openAcres" ).slider( "value" ) );
-    });
-
+  
             // parksOpen
     var parksOpen_slider = 0;
     $(function() {
@@ -725,21 +666,7 @@ $(".rankingsnav").click(function(){
 
 // ----------- WEATHER CONDITIONS ----------
 
-            // baseTempPredicted
-    var baseTempPredicted_slider = 0;
-    $(function() {
-      $( "#slider_baseTempPredicted" ).slider({
-        value: baseTempPredicted_slider,
-        min: -2,
-        max: 2,
-        step: 1,
-        slide: function( event, ui ) {
-          $( "#baseTempPredicted_value" ).val( "$" + ui.value );
-        }
-      });
-      $( "#baseTempPredicted_value" ).val( "$" + $( "#baseTempPredicted" ).slider( "value" ) );
-    });
-
+   
             // weatherToday
     var weatherToday_slider = 0;
     $(function() {
@@ -822,7 +749,7 @@ $(".conditions_page").append(conditions_selection_panel);
 
           var choose_conditions = document.createElement('h2');
           $(conditions_selection_panel_col1).append(choose_conditions);
-          $(choose_conditions).append("Choose your conditions.");
+        
 
           var conditions_menu = document.createElement('div');
           $(conditions_selection_panel_col1).append(conditions_menu);
@@ -921,6 +848,9 @@ $.each(mountainlist,function(position,name) {
 $("."+name).parent().parent().parent().toggle("slide");
 
 });
+
+$('h1.score').tsort();
+
          $(".rankings_page").show("slide", { direction: "right " }, 1200);         
           $(".conditions_page").hide("slide", { direction: "left" }, 1200);
 
@@ -991,10 +921,9 @@ $("."+name).parent().parent().parent().toggle("slide");
 
 
                     //Main  Algorithem
-                    var ShredCastScore = Wind_Conditions + Temp_Conditions + Lifts_Conditions + Weather_Conditions + Snow_conditions
+                    var ShredCastScore =  snowLast48_slider + snowNext48_slider + snowNext24_slider + snowNextWeek_slider + snowBaseMax_slider + openTrails_slider + openLifts_slider + parksOpen_slider + weatherToday_slider + weatherTomorrow_slider + windToday_slider + windTomorrow_slider    
                     var ShredCastScore = 100/ShredCastScore 
-                    var ShredCastScore = (Wind_Conditions * ShredCastScore)*total_wind + (Weather_Conditions * ShredCastScore)*total_weather +  (Temp_Conditions * ShredCastScore)*total_temp + (Lifts_Conditions * ShredCastScore)*total_lift + (Snow_conditions * ShredCastScore)*total_snow
-                    var ShredCastScore = Math.round(ShredCastScore*.1)
+                   
 
 
                     //Mountain deisplay text
