@@ -215,12 +215,12 @@ $(".rankingsnav").click(function(){
                             //End of State Each
 
                 $(mount.mountain).each(function() {
-                    var name = this.name;
-                    var temperature =  this.temp;
-                    var cityState = this.state;
-                    var windSpeed = this.windspeed;
-                    var base = this.snow;
-                    var ShredCastScore = 80;
+                    var name = this.name
+                    var temperature =  this.temp_Conditions
+                    var cityState = this.state
+                    var windSpeed = this.windspeed
+                    var base = this.snow
+                   
                     var sign = "#";
                     var statehash = sign + cityState;
                    
@@ -338,7 +338,13 @@ $(".rankingsnav").click(function(){
 // Condtion variables
 
 // Variables Range from 1 to 5 
-// 
+  var Wind_Conditions = 3 
+  var Temp_Conditions = 1
+  var Lifts_Conditions = 2
+  var Weather_Conditions = 1
+  var Snow_conditions = 3
+
+
 
 
 
@@ -512,7 +518,19 @@ $(".conditions_page").append(conditions_selection_panel);
                     var weatherTomorrowLow = this.weatherTomorrowLow //'weatherTomorrow_Temperature_Low'
                     var weatherTomorrowHigh = this.weatherTomorrowHigh //
 
-                    var ShredCastScore = ;
+                    var total_snow =  snowLast48 * .1 + (snowBaseMax) * .01 + snowNext24 * .01
+                    var total_temp = Math.abs((weatherTodayLow +((weatherTodayHigh - weatherTodayLow) /2) - 28)*.1);
+                    var total_lift = openTrails/maxTrails
+                    var total_wind = 10/windToday;
+                    //FIX THIS PLEASE
+                    var total_weather = ((total_wind + total_temp + total_temp)/3)*.1
+
+
+                    //Main  Algorithem
+                    var ShredCastScore = Wind_Conditions + Temp_Conditions + Lifts_Conditions + Weather_Conditions + Snow_conditions
+                    var ShredCastScore = 100/ShredCastScore 
+                    var ShredCastScore = (Wind_Conditions * ShredCastScore)*total_wind + (Weather_Conditions * ShredCastScore)*total_weather +  (Temp_Conditions * ShredCastScore)*total_temp + (Lifts_Conditions * ShredCastScore)*total_lift + (Snow_conditions * ShredCastScore)*total_snow
+                    var ShredCastScore = Math.round(ShredCastScore*.1)
 
 
                     //Mountain deisplay text
@@ -525,7 +543,7 @@ $(".conditions_page").append(conditions_selection_panel);
                     var snowBaseMin_text = "Base Snow Min Depth: "+snowBaseMin+" in"    //u'avgBaseDepthMin'
                     var openTrails_text = "Open Trails: " + openTrails +  "/" + maxTrails   //u'openDownHillTrials'
                     var openAcres_text = "Open Acres: " + openAcres + "/" + maxAcres     //u'openDownHillAcres'
-                    var openLifts_text = "Open Lifts: " + openLifts  + "/" + maxLifts   //u'openDownHillLifts'
+                    var openLifts_text = "Open Lifts_Conditions: " + openLifts  + "/" + maxLifts   //u'openDownHillLifts'
                     var terrainParkOpen_text = "Terrain Park?: " + terrainParkOpen //u'terrainParkOpen'
                     var parksOpen_text = "Terrain Parks Open: " + parksOpen //u'numberTerrainParksOpen'
                     var primarySurface_text = "Primary Surface: "+ primarySurface//u'primarySurfaceCondition'
@@ -544,7 +562,7 @@ $(".conditions_page").append(conditions_selection_panel);
 
 
 
-                 //   var temperature = this.temp;
+                 //   var temperature = this.temp_Conditions;
                   //  var cityState = this.state;
                    // var windSpeed = this.windspeed;
                   //  var base = this.snow;
@@ -555,8 +573,8 @@ $(".conditions_page").append(conditions_selection_panel);
                   //  var sign = "#";
                   //  var statehash = sign + cityState;
 
-                 //   var temperature =  "Temp:     "+ temperature + "F";
-                   // var windSpeed = "Wind Speed:     " + windSpeed +"mph";
+                 //   var temperature =  "Temp_Conditions:     "+ temperature + "F";
+                   // var windSpeed = "Wind_Conditions Speed:     " + windSpeed +"mph";
                   //  var base = "Base:     "+base;
 
                    
@@ -651,7 +669,7 @@ $(".conditions_page").append(conditions_selection_panel);
                                                 $(list_base).append(snowLast48_text); 
                                                 $(list_base).addClass('base');
 
-                                                // WIND SPEED
+                                                // WIND_Conditions SPEED
                                                 var list_windSpeed = document.createElement('li');
                                                 $(condtions_list1).append(list_windSpeed); 
                                                 $(list_windSpeed).append(openLifts_text);

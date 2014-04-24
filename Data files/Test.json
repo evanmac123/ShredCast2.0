@@ -42,7 +42,7 @@ var mount= {"mountain":[
                     "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
                     },
                   
-                 {"name":"Another Resort", //u'resortName'
+                 {"name":"One Resort", //u'resortName'
                     "state":"ME", //u'state'
                     "id":"802007", //u'id'
                     "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
@@ -104,17 +104,17 @@ var mount= {"mountain":[
                     "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
                     },
 
-                     {"name":"One Resort", //u'resortName'
+                     {"name":"Another Resort", //u'resortName'
                     "state":"MA", //u'state'
                     "id":"802007", //u'id'
                     "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
-                    "snowLast48":"0", //u'snowLast48Hours'
-                    "snowNext24":"0", //u'predictedSnowFall_24Hours'
+                    "snowLast48":"3", //u'snowLast48Hours'
+                    "snowNext24":"2", //u'predictedSnowFall_24Hours'
                     "snowNext48":"0", //u'predictedSnowFall_48Hours'
                     "snowNextWeek":"4", //u'predictedSnowFall_7days'
-                    "snowBaseMax":"30", //u'avgBaseDepthMax'
-                    "snowBaseMin":"12", //u'avgBaseDepthMin'
-                    "openTrails":"66", //u'openDownHillTrials'
+                    "snowBaseMax":"50", //u'avgBaseDepthMax'
+                    "snowBaseMin":"32", //u'avgBaseDepthMin'
+                    "openTrails":"100", //u'openDownHillTrials'
                     "openAcres":"316", //u'openDownHillAcres'
                     "openLifts":"5", //u'openDownHillLifts'
                     "maxTrails":"155", //u'maxOpenDownHillTrails'
@@ -126,11 +126,11 @@ var mount= {"mountain":[
                     "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
                     "baseTempPredicted":"49", //u'foreCastBaseTemp'
                     "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
-                    "windToday":"24", //u'weatherToday_WindSpeed'
-                    "weatherTodayLow":"30", //u'weatherToday_Temperature_Low'
-                    "weatherTodayHigh":"38", //u'weatherToday_Temperaute_High'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"25", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"30", //u'weatherToday_Temperaute_High'
                     "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
-                    "windTomorrow":"14", //u'weatherTomorrow_WindSpeed'
+                    "windTomorrow":"7", //u'weatherTomorrow_WindSpeed'
                     "weatherTomorrowLow":"24", //u'weatherTomorrow_Temperature_Low'
                     "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
                     },
@@ -150,6 +150,13 @@ var states = {"statenames":[
 
 
 /*
+
+  var Wind = 0 
+  var Temp = 0
+  var Lifts = 0
+  var Weather = 0
+  var Snow conditions = 0 
+
 var mount= {"mountain":[ 
 	{"name":"Loon Mountain" , 
 	"state":"NH",
