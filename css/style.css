@@ -1,9 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+#wrapper {
+    position:relative;  
+    background-color: #FFF;  
+
+}
+
+#wrapper > .wrapperDiv {
+    position:absolute;
+    top:0;
+    float: left;
+    overflow:hidden;  
+
+}
+
+
 .holder{
-
-
 margin-top:10px;
 
 }
@@ -221,23 +235,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
 .mountain_page{
 
 background-color:;
-
-
-
+overflow: hidden;
 }
 
 
 .conditions_page{
 
 background-color:;
-
-
+overflow: hidden;
 }
 
 
 .rankings_page{
 background-color:;
-
-
+overflow: hidden;
 }
 

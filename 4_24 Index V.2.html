@@ -14,8 +14,9 @@
    
     <script type="text/javascript"src="js/jquerycode.js"></script>
     <script type="text/javascript"src="js/bootstrap.js"></script> 
-   <script type="text/javascript" src="js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
-     
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+      <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--script src="./page_files/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -265,53 +266,27 @@ $(document).ready(function(){
     });
   });
 
-    var maxHeight = 0;
-    $('.slidingDiv').each(function() {
-        if($(this).height() > maxHeight) maxHeight = $(this).height();
-    });
-    $('#wrapper').height(maxHeight);
-    
-    $('#click1').click(function () {
-        $('#box1').hide("slide", {
-            direction: "left"
-        }, 1000);
-        $('#box2').show("slide", {
-            direction: "right"
-        }, 1000);
-    });
-    $('#click2').click(function () {
-        $('#box2').hide("slide", {
-            direction: "right"
-        }, 1000);
-        $('#box1').show("slide", {
-            direction: "left"
-        }, 1000);
-    });
-});
+
 
 </script>
 
 
 <body>
-  <img src="Images/background.jpg" id="full-screen-background-image" />
+    <img src="Images/background.jpg" id="full-screen-background-image" />
 
 
-  <div class="container">
-    <div class="centered fixed">
-      <a id="click1" class="btn btn-default btn-lg center mountainnav" href="#">Mountains</a>
-      <a id="click2" class="btn btn-default btn-lg center conditionsnav" href="#">Conditions</a>
-      <a class="btn btn-default btn-lg center rankingsnav" href="#">Rankings</a>
+    <div class="container">
+        <div class="centered">
+            <a class="btn btn-default btn-lg center mountainnav" href="#">Mountains</a>
+            <a class="btn btn-default btn-lg center conditionsnav" href="#">Conditions</a>
+            <a class="btn btn-default btn-lg center rankingsnav" href="#">Rankings</a>
+        </div>
     </div>
-  </div>
 
 
-  <div id="wrapper">
-    <div id="box1" class="slidingDiv"> <a href="#" id="click1">
-    <div class="mountain_page slides"></div>
-</div>
-
-<div id="box2" class="slidingDiv"> <a href="#" id="click2">
-    <div class="conditions_page slides">
+<div class="wrap">
+<div class="mountain_page slides"></div>
+<div class="conditions_page slides">
       <div class="container">
         <div class="row">
           <h1> Rate your conditions.</h1>
@@ -321,223 +296,222 @@ $(document).ready(function(){
             <h2>Snow Conditions</h2> 
 
 
-            <!--  SNOW CONDITIONS COLUMN -->
-            <div class="row">
-              <div  class="condition_menu">
-                <h3 class="conditions_menu">Last snow</h3> 
-                <div id="slider_lastSnow" class="sliderMargin"></div> <!-- lastSnow -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
+<!--  SNOW CONDITIONS COLUMN -->
+<div class="row">
+  <div  class="condition_menu">
+    <h3 class="conditions_menu">Last snow</h3> 
+    <div id="slider_lastSnow" class="sliderMargin"></div> <!-- lastSnow -->
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Snow past 48hrs</h3> 
-                <div id="slider_snowLast48" class="sliderMargin"></div>  <!-- snowLast48 -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
+<div class="row">
+  <div class="condition_menu">
+    <h3 class="conditions_menu">Snow past 48hrs</h3> 
+    <div id="slider_snowLast48" class="sliderMargin"></div>  <!-- snowLast48 -->
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-            <div class="row"> 
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Snow in the next 24hrs</h3> <!-- snowNext24 -->
-                <div id="slider_snowNext24" class="sliderMargin"></div> 
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
+<div class="row"> 
+<div class="condition_menu">
+  <h3 class="conditions_menu">Snow in the next 24hrs</h3> <!-- snowNext24 -->
+    <div id="slider_snowNext24" class="sliderMargin"></div> 
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-            <div class="row">
-              <div  class="condition_menu">
-                <h3 class="conditions_menu">Snow in the next 48hrs</h3> <!-- snowNext48 -->
-                <div id="slider_snowNext48" class="sliderMargin"></div> 
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
+<div class="row">
+  <div  class="condition_menu">
+  <h3 class="conditions_menu">Snow in the next 48hrs</h3> <!-- snowNext48 -->
+    <div id="slider_snowNext48" class="sliderMargin"></div> 
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
 
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Snowfall next week</h3> <!-- snowNextWeek -->
-                <div id="slider_snowNextWeek" class="sliderMargin"></div> 
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!--  MOUNTAIN CONDITIONS COLUMN -->
-
-          <div class="col-md-4">
-            <h2>Mountain Conditions</h2> 
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Base inches</h3> 
-                <div id="slider_snowBaseMax" class="sliderMargin"></div> <!-- snowBaseMax -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Number of open trails</h3> 
-                <div id="slider_openTrails" class="sliderMargin"></div> <!-- openTrails -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Number of open lifts</h3> 
-                <div id="slider_openLifts" class="sliderMargin"></div> <!-- openLifts -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Number of open acres </h3> 
-                <div id="slider_openAcres" class="sliderMargin"></div> <!-- openAcres -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
+<div class="row">
+  <div class="condition_menu">
+  <h3 class="conditions_menu">Snowfall next week</h3> <!-- snowNextWeek -->
+    <div id="slider_snowNextWeek" class="sliderMargin"></div> 
+    <div class="col-md-6 col-xs-6">
+      Doesn't Matter
+    </div>
+    <div class="col-md-6 col-xs-6 alignTextRight">
+    Matters a lot
+    </div>
+  </div>
+</div>
+</div>
 
 
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Number of terrain parks open</h3> 
-                <div id="slider_parksOpen" class="sliderMargin"></div> <!--parksOpen -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-          </div>
+<!--  MOUNTAIN CONDITIONS COLUMN -->
 
+  <div class="col-md-4">
+    <h2>Mountain Conditions</h2> 
 
-
-          <!--  WEATHER CONDITIONS COLUMN -->
-
-          <div class="col-md-4">
-            <h2>Weather Conditions</h2>
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Base Temperature</h3> 
-                <div id="slider_baseTempPredicted" class="sliderMargin"></div> <!-- baseTempPredicted -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Weather today</h3> 
-                <div id="slider_weatherToday" class="sliderMargin"></div> <!-- weatherToday + weatherTodayHigh + weatherTodayLow -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Weather tomorrow</h3> 
-                <div id="slider_weatherTomorrow" class="sliderMargin"></div> <!-- weatherTomorrow + weatherTomorrowHigh + weatherTomorrowLow-->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Wind today</h3> 
-                <div id="slider_windToday" class="sliderMargin"></div> <!-- windToday -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="condition_menu">
-                <h3 class="conditions_menu">Wind tomorrow</h3> 
-                <div id="slider_windTomorrow" class="sliderMargin"></div> <!-- windTomorrow -->
-                <div class="col-md-6 col-xs-6">
-                  Doesn't Matter
-                </div>
-                <div class="col-md-6 col-xs-6 alignTextRight">
-                  Matters a lot
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Base inches</h3> 
+        <div id="slider_snowBaseMax" class="sliderMargin"></div> <!-- snowBaseMax -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
         </div>
-      </dv>
-
-
-        <div class="rankings_page slides"><button class="btn2"> this one </button> </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of open trails</h3> 
+        <div id="slider_openTrails" class="sliderMargin"></div> <!-- openTrails -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of open lifts</h3> 
+        <div id="slider_openLifts" class="sliderMargin"></div> <!-- openLifts -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of open acres </h3> 
+        <div id="slider_openAcres" class="sliderMargin"></div> <!-- openAcres -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="condition_menu">
+        <h3 class="conditions_menu">Number of terrain parks open</h3> 
+        <div id="slider_parksOpen" class="sliderMargin"></div> <!--parksOpen -->
+        <div class="col-md-6 col-xs-6">
+          Doesn't Matter
+        </div>
+        <div class="col-md-6 col-xs-6 alignTextRight">
+        Matters a lot
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--  WEATHER CONDITIONS COLUMN -->
+
+<div class="col-md-4">
+  <h2>Weather Conditions</h2>
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Base Temperature</h3> 
+      <div id="slider_baseTempPredicted" class="sliderMargin"></div> <!-- baseTempPredicted -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Weather today</h3> 
+      <div id="slider_weatherToday" class="sliderMargin"></div> <!-- weatherToday + weatherTodayHigh + weatherTodayLow -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Weather tomorrow</h3> 
+      <div id="slider_weatherTomorrow" class="sliderMargin"></div> <!-- weatherTomorrow + weatherTomorrowHigh + weatherTomorrowLow-->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Wind today</h3> 
+      <div id="slider_windToday" class="sliderMargin"></div> <!-- windToday -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="condition_menu">
+      <h3 class="conditions_menu">Wind tomorrow</h3> 
+      <div id="slider_windTomorrow" class="sliderMargin"></div> <!-- windTomorrow -->
+      <div class="col-md-6 col-xs-6">
+        Doesn't Matter
+      </div>
+      <div class="col-md-6 col-xs-6 alignTextRight">
+      Matters a lot
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="rankings_page slides"><button class="btn2"> this one </button> </div>
+</div>
 
 
 
@@ -1048,7 +1022,7 @@ $("."+name).parent().parent().parent().toggle("slide");
 
         </div>
     </div>
-  </div>
+</div>
 
 
 
