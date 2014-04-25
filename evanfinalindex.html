@@ -26,26 +26,7 @@
 
 </head>
 
-<script>
-        $(document).ready(function(){
 
-
-
-$(function() {
-    $( "#slider" ).slider({
-      value:100,
-      min: 0,
-      max: 500,
-      step: 50,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-  });
-		});
-  
-</script>
 <body>
     <img src="Images/background.jpg" id="full-screen-background-image" />
 
@@ -210,10 +191,7 @@ $(function() {
     </div>
   </div>
 
-<p>
-  <label for="slider_weatherToday">Donation amount ($50 increments):</label>
-  <input type="text" id="slider_weatherToday" style="border:0; color:#f6931f; font-weight:bold;">
-</p>
+
 
   <div class="row">
     <div class="condition_menu">
@@ -916,10 +894,17 @@ $('h1.score').tsort();
                     var total_weather = ((total_wind + total_temp + total_temp)/3)*.1
 
 
-                    //Main  Algorithem
+                    //////////////////// //Main  Algorithem///////////////////////
+                   //Takes in all initial values and sees distrobution wieghts
                     var ShredCastScore =  snowLast48_slider + snowNext48_slider + snowNext24_slider + snowNextWeek_slider + snowBaseMax_slider + openTrails_slider + openLifts_slider + parksOpen_slider + weatherToday_slider + weatherTomorrow_slider + windToday_slider + windTomorrow_slider    
-                    console.log(ShredCastScore)
+                   //Gets equal parts 
                     var ShredCastScore = 100/ShredCastScore 
+
+
+
+                    var ShredCastScore = ShredCastScore * ((snowLast48_slider * snowLast48/4) + (snowNext48_slider * snowNext48/4) + (snowNext24_slider * snowNext24/2) + (snowNextWeek_slider * snowNextWeek/6) + (snowBaseMax_slider * ((snowBaseMax +snowBaseMin)/2)/25) + (openTrails_slider * (openTrails/maxTrails)) + (openLifts_slider*(openLifts/maxLifts)) + (parksOpen_slider *parksOpen/4) + (weatherToday_slider - Math.abs(((weatherTodayHigh + weatherTodayLow)/2) - 29)) + (weatherTomorrow_slider - Math.abs(((weatherTomorrowHigh + weatherTomorrowLow)/2) - 29)) + (windToday_slider + ((10 - windToday) * 1.1)) + (windTomorrow_slider + (10 - windToday) * 1.1)) 
+
+                   
                    
 
 
