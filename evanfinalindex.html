@@ -68,12 +68,12 @@ $(function() {
         </div>
         <div class="row">
           <div class="col-md-4">
-            <h2>Snow Conditions</h2> 
+           
 
 
 <!--  SNOW CONDITIONS COLUMN -->
 
-
+ <h2>Snow Conditions</h2> 
 <div class="row">
   <div class="condition_menu">
     <h3 class="conditions_menu">Snow past 48hrs</h3> 
@@ -210,6 +210,11 @@ $(function() {
     </div>
   </div>
 
+<p>
+  <label for="slider_weatherToday">Donation amount ($50 increments):</label>
+  <input type="text" id="slider_weatherToday" style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
   <div class="row">
     <div class="condition_menu">
       <h3 class="conditions_menu">Weather tomorrow</h3> 
@@ -264,18 +269,7 @@ $(function() {
 
 
 
- $(function() {
-    $( "#slider" ).slider({
-      value:100,
-      min: 0,
-      max: 500,
-      step: 50,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-  });
+ 
 
 
 
@@ -668,18 +662,18 @@ $(".rankingsnav").click(function(){
 
    
             // weatherToday
-    var weatherToday_slider = 0;
+    var weatherToday_slider = 3;
     $(function() {
       $( "#slider_weatherToday" ).slider({
         value: weatherToday_slider,
-        min: -2,
-        max: 2,
+        min: 1,
+        max: 5,
         step: 1,
         slide: function( event, ui ) {
           $( "#weatherToday_value" ).val( "$" + ui.value );
         }
       });
-      $( "#weatherToday_value" ).val( "$" + $( "#weatherToday" ).slider( "value" ) );
+      $( "#weatherToday_value" ).val( "$" + $( "#slider_weatherToday" ).slider( "value" ) );
     });
 
             // weatherTomorrow
@@ -711,6 +705,8 @@ $(".rankingsnav").click(function(){
       });
       $( "#windToday_value" ).val( "$" + $( "#windToday" ).slider( "value" ) );
     });
+
+console.log(windToday_slider)
 
             // windTomorrow
     var windTomorrow_slider = 0;
@@ -922,6 +918,7 @@ $('h1.score').tsort();
 
                     //Main  Algorithem
                     var ShredCastScore =  snowLast48_slider + snowNext48_slider + snowNext24_slider + snowNextWeek_slider + snowBaseMax_slider + openTrails_slider + openLifts_slider + parksOpen_slider + weatherToday_slider + weatherTomorrow_slider + windToday_slider + windTomorrow_slider    
+                    console.log(ShredCastScore)
                     var ShredCastScore = 100/ShredCastScore 
                    
 
