@@ -38,18 +38,18 @@ $(document).ready(function(){
     $('#wrapper').height(maxHeight);
     
     $('#click1').click(function () {
-        $('#box1').hide("slide", {
+        $('#box1').toggle("slide", {
             direction: "left"
         }, 1000);
-        $('#box2').show("slide", {
+        $('#box2').toggle("slide", {
             direction: "right"
         }, 1000);
     });
     $('#click2').click(function () {
-        $('#box2').hide("slide", {
+        $('#box2').toggle("slide", {
             direction: "right"
         }, 1000);
-        $('#box1').show("slide", {
+        $('#box1').toggle("slide", {
             direction: "left"
         }, 1000);
     });
