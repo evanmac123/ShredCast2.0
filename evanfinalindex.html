@@ -30,7 +30,7 @@
 <body>
     <img src="Images/background.jpg" id="full-screen-background-image" />
 
-
+<!--Main Nav-->
     <div class="container">
         <div class="centered">
             <a class="btn btn-default btn-lg center mountainnav" href="#">Mountains</a>
@@ -39,9 +39,14 @@
         </div>
     </div>
 
-
+<!-- Main Wrapper --> 
 <div class="wrap">
-<div class="mountain_page slides"></div>
+<div class="mountain_page slides">
+  <div class="container">
+        <div class="row">
+          <h1> Choose your mountains.</h1>
+        </div></div></div>
+
 <div class="conditions_page slides">
    <div class="container">
         <div class="row">
@@ -314,9 +319,10 @@ $(".rankingsnav").click(function(){
 
 
 
-
+              
 
                 //initial set up area
+                //Creates the classes and structures for data to be filled in
                     var mountain_selection_panel = document.createElement('div');
                     $(mountain_selection_panel).addClass('container');
                     $(mountain_selection_panel).addClass('mountain_selection');
@@ -353,6 +359,7 @@ $(".rankingsnav").click(function(){
 
 
                             // FUNCTION THAT CREATES STATE LIST
+                            //Pulls from Test.json and creates one occurence for every state
                 $(states.statenames).each(function() {
 
 
@@ -379,14 +386,12 @@ $(".rankingsnav").click(function(){
 
                  });
                             //End of State Each
+                  //Interior Mountain List 
+                  // Within State list
 
                 $(mount.mountain).each(function() {
-                    var name = this.name
-                    var temperature =  this.temp_Conditions
+                    //uses # to attach to the correct state
                     var cityState = this.state
-                    var windSpeed = this.windspeed
-                    var base = this.snow
-                   
                     var sign = "#";
                     var statehash = sign + cityState;
                    
@@ -403,61 +408,60 @@ $(".rankingsnav").click(function(){
 
                 });
 
-
- //Submit button
+    
+ //Creates the Submit Button
     var submit = document.createElement("a");
     $(submit).attr("href", "#");
     $(mountain_selection_panel_row).append(submit);
     $(submit).addClass('btn btn-default btn-lg center submitposition');
     $(submit).append("Submit");
-    
 
 
- //My attempt to remove the mountain once selected 
- //this does not work due to mysteries doesn't recognize the selected mountains as anything
- // can't get a fix on how to select them 
-     
 
 //Jquery to make slider work on Mountian page
 //every click function must be inide this one
   $('#active li ul').hide();    
   $('#active > li > a').click(function(){
 
-         if ($(this).attr('class') != 'active')
-         {
-             $('#active li ul').slideUp();
-              $(this).next().slideToggle();
-              $('#active li a').removeClass('active');
-              $(this).addClass('active');
+                 if ($(this).attr('class') != 'active')
+                 {
+                     $('#active li ul').slideUp();
+                      $(this).next().slideToggle();
+                      $('#active li a').removeClass('active');
+                      $(this).addClass('active');
 
-          }
- 
-       
-        $(".list").on('click',function(remove){
-          //Need a fix to target list better
-          remove.target.remove();
-
-        });
-
- 
-    //Submit array
-    //Moves all of the selected mountains into a array
-    // can't be any spaces in the name for later selection 
-        $("a.submitposition").on("click", function(submit){
-        var selectedmountains = document.getElementsByClassName('list');
-
-        //Global variable that will hold the mountains
-       mountainlist = [];
-
-       //Puts in the id tags
-        $(".list").each(function(){ mountainlist.push(this.id); });
-        console.log(mountainlist);
-       
-
+                  }
          
-        // console.log(arraymountains);
-         $(".mountain_page").hide("slide", { direction: "left" }, 1200); 
-         $(".conditions_page").show("slide", { direction: "right " }, 1200); 
+                //My attempt to remove the mountain once selected 
+         //this does not work due to mysteries. It doesn't recognize the selected mountains as anything
+         // can't get a fix on how to select them unless you click on a state name first
+                $(".list").on('click',function(remove){
+                  //Need a fix to target list better
+                  remove.target.remove();
+
+                });
+
+ 
+            //Submit array
+            //Moves all of the selected mountains into a array
+            // can't be any spaces in the name for later selection 
+                $("a.submitposition").on("click", function(submit){
+                var selectedmountains = document.getElementsByClassName('list');
+
+                //Global variable that will hold the mountains
+               mountainlist = [];
+
+               //Puts in the id tags
+                $(".list").each(function(){ mountainlist.push(this.id); });
+               
+
+                console.log(mountainlist);
+               
+
+                 
+                // Moves the screen to the next page
+                 $(".mountain_page").hide("slide", { direction: "left" }, 1200); 
+                 $(".conditions_page").show("slide", { direction: "right " }, 1200); 
  
      
  
@@ -472,8 +476,7 @@ $(".rankingsnav").click(function(){
 
 
 
-  //Removes clicked on mountains        
-
+   //Removes clicked on mountains        
    //adds mountain to right of selector
     $("a.mount").click(function(e){
          //Holder
@@ -511,10 +514,12 @@ $(".rankingsnav").click(function(){
 
 ///////////////////////////////////////// Conditions page////////////////////////////////////////
 
-// Condtion variables
 
 
 
+//Each occurence deals with a targeted div in the Conditions page
+//Every occurence controls the value of that slider 
+// Needed alot of workarounds because Jquery UI is buggy at best
 
 
 
@@ -530,7 +535,9 @@ $(".rankingsnav").click(function(){
       max: 5,
       step: 1,
         slide:function(event, ui){
+            //This writes the value once the slider is moved
             $('#snowLast48_output').html(ui.value);
+            //This is the value of the slider current position
              snowLast48_slider = ui.value;
         } 
     });
@@ -735,7 +742,7 @@ var openLifts_slider = 1
 
 
 
-//initial set up area
+//initial set up area for conditions page
 var conditions_selection_panel = document.createElement('div');
 $(conditions_selection_panel).addClass('container');
 $(conditions_selection_panel).addClass('mountain_selection');
@@ -807,21 +814,6 @@ $(".conditions_page").append(conditions_selection_panel);
 
 
 
-
-          $(snow_conditions.conditions).each(function() {
-
-          var condition = this.condition;
-
-        // state = name from json file
-          var snow_conditions_container = document.createElement('li');
-          $(mnt_list_container).attr("id", state_name);
-          $(mnt_menu_stateList).append(mnt_list_container);
-
-            $(conditions_menu_active).append(mnt_menu_stateList);
-
-
-
-                 });
 
 
 
@@ -1113,17 +1105,11 @@ $.each(mountainlist,function(position,name) {
 $("."+name).parent().parent().parent().toggle("slide");
 
 });
+    //SHould sort the div's by Score but doesn't because who knows.
+     $("div#rankings_page>div").tsort({attr:"id"});
 
-      $("#rankings_page > div").tsort("",{attr:"id"});
 
 
-//$(".rankings_page div").sort(function (a, b) {
- //   return parseInt(a.id) > parseInt(b.id);
-//}).each(function(){
- //   var elem = $(this);
-  //  elem.remove();
-  //  $(elem).appendTo(".rankings_page");
-//})
 
        $(".rankings_page").show("slide", { direction: "right " }, 1200);         
        $(".conditions_page").hide("slide", { direction: "left" }, 1200);
