@@ -77,10 +77,18 @@ margin-top:10px;
 
 
 .score{
-  font-size: 160pt;
+  font-size: 130pt;
   background: #2DAAE1; 
   width: 270px;
   color: #FFFFFF;
+}
+
+.score_text{
+  font-size: 12pt;
+  background: #2DAAE1; 
+  width: 270px;
+  color: #FFFFFF;
+
 }
 
 

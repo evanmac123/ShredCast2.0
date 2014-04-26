@@ -14,10 +14,10 @@ var mount= {"mountain":[
 	   {"name":"Killington Resort", //u'resortName'
                     "state":"VT", //u'state'
                     "id":"802007", //u'id'
-                    "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
-                    "snowLast48":"0", //u'snowLast48Hours'
-                    "snowNext24":"0", //u'predictedSnowFall_24Hours'
-                    "snowNext48":"0", //u'predictedSnowFall_48Hours'
+                    "lastSnow":"April 14, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"3", //u'snowLast48Hours'
+                    "snowNext24":"4", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"2", //u'predictedSnowFall_48Hours'
                     "snowNextWeek":"4", //u'predictedSnowFall_7days'
                     "snowBaseMax":"30", //u'avgBaseDepthMax'
                     "snowBaseMin":"12", //u'avgBaseDepthMin'
@@ -42,69 +42,69 @@ var mount= {"mountain":[
                     "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
                     },
                   
-                 {"name":"One Resort", //u'resortName'
+                 {"name":"Sugarloaf Resort", //u'resortName'
                     "state":"ME", //u'state'
                     "id":"802007", //u'id'
                     "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
-                    "snowLast48":"0", //u'snowLast48Hours'
+                    "snowLast48":"1", //u'snowLast48Hours'
                     "snowNext24":"0", //u'predictedSnowFall_24Hours'
                     "snowNext48":"0", //u'predictedSnowFall_48Hours'
-                    "snowNextWeek":"4", //u'predictedSnowFall_7days'
-                    "snowBaseMax":"30", //u'avgBaseDepthMax'
-                    "snowBaseMin":"12", //u'avgBaseDepthMin'
-                    "openTrails":"66", //u'openDownHillTrials'
-                    "openAcres":"316", //u'openDownHillAcres'
-                    "openLifts":"5", //u'openDownHillLifts'
-                    "maxTrails":"155", //u'maxOpenDownHillTrails'
-                    "maxAcres":"1509", //u'maxOpenDownHillAcres'
+                    "snowNextWeek":"8", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"31", //u'avgBaseDepthMax'
+                    "snowBaseMin":"11", //u'avgBaseDepthMin'
+                    "openTrails":"42", //u'openDownHillTrials'
+                    "openAcres":"500", //u'openDownHillAcres'
+                    "openLifts":"4", //u'openDownHillLifts'
+                    "maxTrails":"79", //u'maxOpenDownHillTrails'
+                    "maxAcres":"700", //u'maxOpenDownHillAcres'
                     "maxLifts":"22", //u'maxOpenDownHillLifts'
                     "terrainParkOpen":"yes", //u'terrainParkOpen'
                     "parksOpen":"1", //u'numberTerrainParksOpen'
                     "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
                     "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
-                    "baseTempPredicted":"49", //u'foreCastBaseTemp'
+                    "baseTempPredicted":"20", //u'foreCastBaseTemp'
                     "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
-                    "windToday":"24", //u'weatherToday_WindSpeed'
-                    "weatherTodayLow":"30", //u'weatherToday_Temperature_Low'
-                    "weatherTodayHigh":"38", //u'weatherToday_Temperaute_High'
+                    "windToday":"2", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"10", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"25", //u'weatherToday_Temperaute_High'
                     "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
-                    "windTomorrow":"14", //u'weatherTomorrow_WindSpeed'
-                    "weatherTomorrowLow":"24", //u'weatherTomorrow_Temperature_Low'
-                    "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
+                    "windTomorrow":"20", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"10", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"15", //u'weatherTomorrow_Temperature_High'
                     },
 
-                     {"name":"The Resort", //u'resortName'
+                     {"name":"Cannon", //u'resortName'
                     "state":"NH", //u'state'
                     "id":"802007", //u'id'
-                    "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
-                    "snowLast48":"0", //u'snowLast48Hours'
-                    "snowNext24":"0", //u'predictedSnowFall_24Hours'
-                    "snowNext48":"0", //u'predictedSnowFall_48Hours'
+                    "lastSnow":"April 13, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"1", //u'snowLast48Hours'
+                    "snowNext24":"1", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"4", //u'predictedSnowFall_48Hours'
                     "snowNextWeek":"4", //u'predictedSnowFall_7days'
-                    "snowBaseMax":"30", //u'avgBaseDepthMax'
-                    "snowBaseMin":"3", //u'avgBaseDepthMin'
+                    "snowBaseMax":"50", //u'avgBaseDepthMax'
+                    "snowBaseMin":"20", //u'avgBaseDepthMin'
                     "openTrails":"66", //u'openDownHillTrials'
                     "openAcres":"316", //u'openDownHillAcres'
-                    "openLifts":"5", //u'openDownHillLifts'
+                    "openLifts":"21", //u'openDownHillLifts'
                     "maxTrails":"155", //u'maxOpenDownHillTrails'
-                    "maxAcres":"1509", //u'maxOpenDownHillAcres'
+                    "maxAcres":"700", //u'maxOpenDownHillAcres'
                     "maxLifts":"22", //u'maxOpenDownHillLifts'
                     "terrainParkOpen":"yes", //u'terrainParkOpen'
-                    "parksOpen":"1", //u'numberTerrainParksOpen'
+                    "parksOpen":"0", //u'numberTerrainParksOpen'
                     "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
                     "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
-                    "baseTempPredicted":"49", //u'foreCastBaseTemp'
+                    "baseTempPredicted":"4", //u'foreCastBaseTemp'
                     "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
-                    "windToday":"50", //u'weatherToday_WindSpeed'
-                    "weatherTodayLow":"0", //u'weatherToday_Temperature_Low'
+                    "windToday":"28", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"1", //u'weatherToday_Temperature_Low'
                     "weatherTodayHigh":"8", //u'weatherToday_Temperaute_High'
                     "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
-                    "windTomorrow":"14", //u'weatherTomorrow_WindSpeed'
-                    "weatherTomorrowLow":"24", //u'weatherTomorrow_Temperature_Low'
+                    "windTomorrow":"12", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"39", //u'weatherTomorrow_Temperature_Low'
                     "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
                     },
 
-                     {"name":"Another Resort", //u'resortName'
+                     {"name":"Berkshire East", //u'resortName'
                     "state":"MA", //u'state'
                     "id":"802007", //u'id'
                     "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
@@ -112,81 +112,282 @@ var mount= {"mountain":[
                     "snowNext24":"2", //u'predictedSnowFall_24Hours'
                     "snowNext48":"0", //u'predictedSnowFall_48Hours'
                     "snowNextWeek":"4", //u'predictedSnowFall_7days'
-                    "snowBaseMax":"50", //u'avgBaseDepthMax'
+                    "snowBaseMax":"70", //u'avgBaseDepthMax'
                     "snowBaseMin":"32", //u'avgBaseDepthMin'
-                    "openTrails":"100", //u'openDownHillTrials'
-                    "openAcres":"316", //u'openDownHillAcres'
-                    "openLifts":"5", //u'openDownHillLifts'
-                    "maxTrails":"155", //u'maxOpenDownHillTrails'
-                    "maxAcres":"1509", //u'maxOpenDownHillAcres'
+                    "openTrails":"40", //u'openDownHillTrials'
+                    "openAcres":"500", //u'openDownHillAcres'
+                    "openLifts":"12", //u'openDownHillLifts'
+                    "maxTrails":"50", //u'maxOpenDownHillTrails'
+                    "maxAcres":"1100", //u'maxOpenDownHillAcres'
                     "maxLifts":"22", //u'maxOpenDownHillLifts'
                     "terrainParkOpen":"yes", //u'terrainParkOpen'
-                    "parksOpen":"1", //u'numberTerrainParksOpen'
+                    "parksOpen":"0", //u'numberTerrainParksOpen'
                     "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
                     "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
-                    "baseTempPredicted":"49", //u'foreCastBaseTemp'
+                    "baseTempPredicted":"16", //u'foreCastBaseTemp'
                     "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
                     "windToday":"10", //u'weatherToday_WindSpeed'
                     "weatherTodayLow":"25", //u'weatherToday_Temperature_Low'
                     "weatherTodayHigh":"30", //u'weatherToday_Temperaute_High'
                     "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
                     "windTomorrow":"7", //u'weatherTomorrow_WindSpeed'
-                    "weatherTomorrowLow":"24", //u'weatherTomorrow_Temperature_Low'
-                    "weatherTomorrowHigh":"47", //u'weatherTomorrow_Temperature_High'
+                    "weatherTomorrowLow":"10", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"18", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                    {"name":"Jay Peak", //u'resortName'
+                    "state":"VT", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"0", //u'snowLast48Hours'
+                    "snowNext24":"0", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"0", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"0", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"100", //u'avgBaseDepthMax'
+                    "snowBaseMin":"80", //u'avgBaseDepthMin'
+                    "openTrails":"90", //u'openDownHillTrials'
+                    "openAcres":"500", //u'openDownHillAcres'
+                    "openLifts":"7", //u'openDownHillLifts'
+                    "maxTrails":"120", //u'maxOpenDownHillTrails'
+                    "maxAcres":"1100", //u'maxOpenDownHillAcres'
+                    "maxLifts":"10", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"0", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"4", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"1", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"10", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"7", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"10", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"18", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                    {"name":"Wildcat", //u'resortName'
+                    "state":"NH", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 16, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"2", //u'snowLast48Hours'
+                    "snowNext24":"2", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"2", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"7", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"130", //u'avgBaseDepthMax'
+                    "snowBaseMin":"90", //u'avgBaseDepthMin'
+                    "openTrails":"120", //u'openDownHillTrials'
+                    "openAcres":"500", //u'openDownHillAcres'
+                    "openLifts":"9", //u'openDownHillLifts'
+                    "maxTrails":"140", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"10", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"3", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"15", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"5", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"8", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"19", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"1", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"8", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                    {"name":"Sunday River", //u'resortName'
+                    "state":"ME", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 1, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"0", //u'snowLast48Hours'
+                    "snowNext24":"0", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"0", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"1", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"40", //u'avgBaseDepthMax'
+                    "snowBaseMin":"10", //u'avgBaseDepthMin'
+                    "openTrails":"10", //u'openDownHillTrials'
+                    "openAcres":"200", //u'openDownHillAcres'
+                    "openLifts":"2", //u'openDownHillLifts'
+                    "maxTrails":"70", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"10", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"0", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"30", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"5", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"30", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"40", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"40", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"50", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                    {"name":"Butternut", //u'resortName'
+                    "state":"MA", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 1, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"6", //u'snowLast48Hours'
+                    "snowNext24":"7", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"12", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"7", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"100", //u'avgBaseDepthMax'
+                    "snowBaseMin":"90", //u'avgBaseDepthMin'
+                    "openTrails":"200", //u'openDownHillTrials'
+                    "openAcres":"800", //u'openDownHillAcres'
+                    "openLifts":"9", //u'openDownHillLifts'
+                    "maxTrails":"140", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"12", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"4", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"20", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"20", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"28", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"2", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"4", //u'weatherTomorrow_Temperature_High'
+                    },
+
+
+                    {"name":"More Examples", //u'resortName'
+                    "state":"RI", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 1, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"6", //u'snowLast48Hours'
+                    "snowNext24":"7", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"12", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"7", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"100", //u'avgBaseDepthMax'
+                    "snowBaseMin":"90", //u'avgBaseDepthMin'
+                    "openTrails":"200", //u'openDownHillTrials'
+                    "openAcres":"800", //u'openDownHillAcres'
+                    "openLifts":"9", //u'openDownHillLifts'
+                    "maxTrails":"140", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"12", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"4", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"20", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"20", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"28", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"2", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"4", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                     {"name":"Another Examples", //u'resortName'
+                    "state":"RI", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 1, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"6", //u'snowLast48Hours'
+                    "snowNext24":"7", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"12", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"7", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"100", //u'avgBaseDepthMax'
+                    "snowBaseMin":"90", //u'avgBaseDepthMin'
+                    "openTrails":"200", //u'openDownHillTrials'
+                    "openAcres":"800", //u'openDownHillAcres'
+                    "openLifts":"9", //u'openDownHillLifts'
+                    "maxTrails":"140", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"12", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"4", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"20", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"20", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"28", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"2", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"4", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                     {"name":"One Examples", //u'resortName'
+                    "state":"RI", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 1, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"6", //u'snowLast48Hours'
+                    "snowNext24":"7", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"12", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"7", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"100", //u'avgBaseDepthMax'
+                    "snowBaseMin":"90", //u'avgBaseDepthMin'
+                    "openTrails":"200", //u'openDownHillTrials'
+                    "openAcres":"800", //u'openDownHillAcres'
+                    "openLifts":"9", //u'openDownHillLifts'
+                    "maxTrails":"140", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"12", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"4", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"20", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"20", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"28", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"2", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"4", //u'weatherTomorrow_Temperature_High'
+                    },
+
+                     {"name":"Two Examples", //u'resortName'
+                    "state":"RI", //u'state'
+                    "id":"802007", //u'id'
+                    "lastSnow":"April 1, 2014", //u'lastSnowFallDate'
+                    "snowLast48":"6", //u'snowLast48Hours'
+                    "snowNext24":"7", //u'predictedSnowFall_24Hours'
+                    "snowNext48":"12", //u'predictedSnowFall_48Hours'
+                    "snowNextWeek":"7", //u'predictedSnowFall_7days'
+                    "snowBaseMax":"100", //u'avgBaseDepthMax'
+                    "snowBaseMin":"90", //u'avgBaseDepthMin'
+                    "openTrails":"200", //u'openDownHillTrials'
+                    "openAcres":"800", //u'openDownHillAcres'
+                    "openLifts":"9", //u'openDownHillLifts'
+                    "maxTrails":"140", //u'maxOpenDownHillTrails'
+                    "maxAcres":"900", //u'maxOpenDownHillAcres'
+                    "maxLifts":"12", //u'maxOpenDownHillLifts'
+                    "terrainParkOpen":"yes", //u'terrainParkOpen'
+                    "parksOpen":"4", //u'numberTerrainParksOpen'
+                    "primarySurface":"Machine Groomed", //u'primarySurfaceCondition'
+                    "secondarySurface":"Spring Conditions", //u'secondarySurfaceCondition'
+                    "baseTempPredicted":"20", //u'foreCastBaseTemp'
+                    "weatherToday":"Mostly Sunny", //u'weatherToday_Condition'
+                    "windToday":"10", //u'weatherToday_WindSpeed'
+                    "weatherTodayLow":"20", //u'weatherToday_Temperature_Low'
+                    "weatherTodayHigh":"28", //u'weatherToday_Temperaute_High'
+                    "weatherTomorrow":"Partly Cloudy", //u'weatherTomorrow_Condition'
+                    "windTomorrow":"30", //u'weatherTomorrow_WindSpeed'
+                    "weatherTomorrowLow":"2", //u'weatherTomorrow_Temperature_Low'
+                    "weatherTomorrowHigh":"4", //u'weatherTomorrow_Temperature_High'
                     },
 	
 	
 	
-]
-}
-
-var states = {"statenames":[
-{"state_name":"NH", },
-{"state_name":"ME", },
-{"state_name":"VT", },
-{"state_name":"MA", },
-
-]}   
-
-
-/*
-
-  var Wind = 0 
-  var Temp = 0
-  var Lifts = 0
-  var Weather = 0
-  var Snow conditions = 0 
-
-var mount= {"mountain":[ 
-	{"name":"Loon Mountain" , 
-	"state":"NH",
-	"snow":5,
-	"windspeed":4,
-	"temp":20}, 
 	
-	{"name":"Stowe Mountain" , 
-	"state":"NH",
-	"snow":4,
-	"windspeed":5,
-	"temp":20}, 
 	
-	{"name":"Sugarloaf" , 
-	"state":"VT",
-	"snow":3,
-	"windspeed":4,
-	"temp":20}, 
-	
-	{"name":"Blue Hills" , 
-	"state":"MA",
-	"snow":9,
-	"windspeed":4,
-	"temp":20}, 
-
-	{"name":"Sunday River" , 
-	"state":"ME",
-	"snow":9,
-	"windspeed":4,
-	"temp":20}, 
 	
 ]
 }
@@ -196,7 +397,12 @@ var states = {"statenames":[
 {"state_name":"ME", },
 {"state_name":"VT", },
 {"state_name":"MA", },
+{"state_name":"RI", },
+
+
+
+
 
 ]}   
 
-*/
+
