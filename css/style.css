@@ -19,6 +19,17 @@ li{
   margin-bottom: 11pt;
 }
 
+#logo{
+position:fixed;
+top:0px;
+left:0px;
+width:195px;
+height:45px;
+z-index: 3;
+
+}
+
+
 
 /* Nav bar styling */
 

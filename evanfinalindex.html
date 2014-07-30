@@ -30,6 +30,7 @@
     if ($(window).width() < 514) {
         $('.btn').removeClass('btn-lg')
         $('.btn').addClass('btn-sm');
+       
     }
     else {
         if (!init) {
@@ -101,6 +102,7 @@ $(document).ready(function() {
         <div class="row">
           <div class="col-md-12">
             <div class="centered">
+            <img src='logo.png' id="logo"/>
             <a class="btn btn-default btn-lg mountainnav" href="#">Mountains</a>
             <a class="btn btn-default btn-lg conditionsnav" href="#">Conditions</a>
             <a class="btn btn-default btn-lg rankingsnav" href="#">Rankings</a>
@@ -114,8 +116,9 @@ $(document).ready(function() {
 
 <!--Start of Body--> 
 <body>
-    <img src="Images/background.jpg" id="full-screen-background-image" />
 
+    <img src="Images/background.jpg" id="full-screen-background-image" />
+ 
     <div class="wrapper">
       <div id="mountains_page" class="mountain_page wrapperDiv"></div>
       <div id="conditions_page" class="conditions_page wrapperDiv">

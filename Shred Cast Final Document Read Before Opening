@@ -1,0 +1,65 @@
+ShredCast Final Project Document
+
+Evan McEldowney - Front end to Back
+Nathan Husley - Design and Front end
+(featuring Max Scala) - API search and info
+
+Project Summary:
+
+Our final project met the standards of our Moore’s Law plan in overall success, however there were some more polished details we were able to include that put us somewhere in between. We successfully created a single page document that contains three different panels. Each panel pulls from a json document that contains a list of mountains and conditions. We did not reach our goal of pulling 10+ mountains due to issues gaining full access to available APIs (ie no response to emails requesting full API access), however we could, in theory, pull as many as we have in the JSON seamlessly. We were able to successfully pull data on 3 mountains (what was available without full access) that is written into a json file. We also were unsuccessful in using a backend algorithm which we set out to have initially, the algorithm is now run on the front end using jQuery but will be moved into the backend in the future. Another set back is that the mountains are not sorted due to the fact the jquery function was elusive. The user is greeted by a mountain selection screen where they select their mountains from a list. They then rate their conditions based on what “matters most” to them. The resulting third panel is their selected mountains ranked by their corresponding score which is created by our algorithm that takes the input from the user and data from the json file to produce a weighted score. 
+
+Using ShredCast:
+
+To run our project, run ShredCast.html, that’s it! Just select your mountains, click submit, then rank your conditions that matter most to you, hit submit again and you’ll be at your customized results. To try again just reload the page.
+
+Coolest Part:
+
+The coolest part of our project is that we were able to create a single document with multiple independent panels that all link data together from an unlimited amount of mountains, with any json file. Our site is set to be scalable from the beginning. Another perk is that it was also built mobile friendly, and is fully responsive. Overall we included a lot of great features that we can expand on in the future.
+
+
+
+
+
+
+Project Milestones
+
+Week 1 (Proposal)
+Max: JSON database being constructed
+Evan: Initial research on communicating between JSON and Javascript as well as beginning to write code to synthesize database info
+Nathan: Initial framework for website’s front end
+
+Week 1 (Actual)
+Max: Search for APIs
+Evan: Initial research on communicating between JSON and Javascript as well as beginning to write code to synthesize database info
+Nathan: Initial framework for website’s front end
+
+Week 2 (Proposal)
+Finish previously mentioned work
+
+Week 2 (Actual)
+Evan: Successfully reading JSON with Jquery
+Max: Waiting to hear from API keys
+Nathan: Styling of rankings page
+
+Week 3 (Proposal)
+Max: #6
+Evan: #5 and #7 on tech story list
+Nathan: #8 
+
+Week 3 (Proposal)
+Max: #6
+Evan: #5 and #7 on tech story list
+Nathan: #8 
+
+Week 3 (Actual)
+Max: Waiting for API
+Evan: Putting mountains into arrays and selecting mountains from the json file and properly placing them in rankings
+Nathan: Styling Mountains page
+
+Week 4 (Proposal)
+Finish everything
+
+Week 4 (Actual)
+Max: Structured JSON file based on API data, Writes Python script to pull data from API and updates JSON file
+Evan: Algorithm completed and sorting rankings + final tweaks
+Nathan: Styling of conditions selections, corrected panel sliding + final tweaks
